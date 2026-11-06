@@ -2,7 +2,7 @@
 
 Code for the article *Covariate-adjusted co-expression does not establish gene–immune checkpoint specificity in glioblastoma: a genome-wide negative-control analysis with EZH2 as a case study* (Siraj Ud Din, Sartaj Ud Din, Asif Ali Shah).
 
-Archived version: [Zenodo DOI]
+   Archived version: https://doi.org/10.5281/zenodo.24015878
 
 ## What the code does
 
