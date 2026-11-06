@@ -1,12 +1,12 @@
 # Covariate-adjusted co-expression does not establish gene–immune checkpoint specificity in glioblastoma
 
-Code for the article *Covariate-adjusted co-expression does not establish gene–immune checkpoint specificity in glioblastoma: a genome-wide negative-control analysis with EZH2 as a case study* (Siraj Ud Din, Sartaj Ud Din, Asif Ali Shah).
+Code for the article *Covariate-adjusted co-expression does not establish gene–immune checkpoint specificity in glioblastoma: a genome-wide benchmark* (Siraj Ud Din).
 
-   Archived version: https://doi.org/10.5281/zenodo.24015878
+Archived version: [Zenodo DOI]
 
 ## What the code does
 
-Three public cohorts of primary IDH-wildtype glioblastoma (TCGA n = 160, CGGA_325 n = 74, CGGA_693 n = 109) are analysed. The standard analysis (partial Spearman correlations adjusted for proliferation and ESTIMATE scores, pooled across cohorts) is applied to *EZH2* and eight checkpoint genes. The same pipeline is then applied to matched control genes, to all 12,130 expressed genes (genome-wide null), to positive controls, to spiked-in signals and to genes from published glioma studies.
+Three public cohorts of primary IDH-wildtype glioblastoma (TCGA n = 160, CGGA_325 n = 74, CGGA_693 n = 109) are analysed. The standard analysis (partial Spearman correlations adjusted for proliferation and ESTIMATE scores, pooled across cohorts) is applied to *EZH2* and eight checkpoint genes. The same pipeline is then applied to matched reference genes, to all 12,130 expressed genes (genome-wide reference distribution), to positive controls, to spiked-in signals and to genes from published glioma studies.
 
 ## Files
 
@@ -15,8 +15,8 @@ Three public cohorts of primary IDH-wildtype glioblastoma (TCGA n = 160, CGGA_32
 | `00_setup.R` | Packages, constants and helper functions (partial Spearman correlation, Fisher-z pooling). Sourced by the other scripts; not run on its own. | – |
 | `01_data_and_cohorts.R` | Downloads TCGA-GBM RNA-seq and clinical data, prepares the CGGA files, computes ESTIMATE and MCP-counter scores, builds the three cohorts | `share/*.rds`, `share/scores_*.csv`, `results/cohorts.rds` |
 | `02_main_analyses.R` | Expression, PRC2 and proliferation; survival; checkpoint partial correlations; microenvironment; single-cell expression; Hallmark sensitivity | Tables S1–S5, Supplementary Figs. S1–S3 and S5, Fig. 1 |
-| `03_benchmark_and_robustness.R` | Measurement-error simulation; matched negative-control benchmark; survival, robustness, pooling and cohort sensitivity analyses; benchmark, simulation and forest-plot figures | Tables S6–S7, Fig. 2, Supplementary Figs. S4 and S6 |
-| `04_genomewide_controls_audit.R` | Comparator-rule sensitivity, genome-wide calibration and marker genes; genome-wide null and principal-component adjustment; positive controls, spike-in power and audit of published claims; copies all figures under their article numbers | Tables S9–S11, Figs. 3–5, `figures/article/` |
+| `03_benchmark_and_robustness.R` | Measurement-error simulation; matched reference-gene benchmark; survival, robustness, pooling and cohort sensitivity analyses; benchmark, simulation and forest-plot figures | Tables S6–S7, Fig. 2, Supplementary Figs. S4 and S6 |
+| `04_genomewide_controls_audit.R` | Reference-rule sensitivity, genome-wide calibration and marker genes; genome-wide reference distribution and principal-component adjustment; positive controls, spike-in power and audit of published claims; copies all figures under their article numbers | Tables S9–S11, Figs. 3–5, `figures/article/` |
 
 ## Requirements
 
@@ -72,5 +72,7 @@ After step 4, `figures/article/` contains every figure under its article number 
 Intermediate figures written by individual analyses (for example `FigureS2_specificity_benchmark`, `FigureS3_simulation`) are superseded by the article figures.
 
 ## License
+
+Figures are saved as PDF, PNG (300 dpi) and TIFF (600 dpi, LZW; journal version without in-figure titles); `figures/article/` holds them under their article numbers.
 
 MIT. Please cite the article and the archived code.
