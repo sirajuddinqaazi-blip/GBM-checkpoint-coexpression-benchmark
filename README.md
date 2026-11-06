@@ -2,7 +2,7 @@
 
 Code for the article *Covariate-adjusted co-expression does not establish gene–immune checkpoint specificity in glioblastoma: a genome-wide benchmark* (Siraj Ud Din).
 
-Archived version: [Zenodo DOI]
+Archived version:(https://doi.org/10.5281/zenodo.24023841)
 
 ## What the code does
 
